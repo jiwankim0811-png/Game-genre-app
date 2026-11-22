@@ -48,18 +48,21 @@ jobs:
             --region ${{ env.REGION }} \
             --platform managed \
             --allow-unauthenticated \
+            --port 3000 \
             --set-env-vars GEMINI_API_KEY="${{ secrets.GEMINI_API_KEY }}"
 
       - name: Post-Deployment Smoke Test
         run: |
           SERVICE_URL=$(gcloud run services describe ${{ env.SERVICE_NAME }} --project ${{ env.PROJECT_ID }} --region ${{ env.REGION }} --format="value(status.url)")
           echo "Cloud Run Service URL: $SERVICE_URL"
-          echo "Running health check on $SERVICE_URL/health ..."
-          HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" "$SERVICE_URL/health")
+          echo "Running health check on $SERVICE_URL ..."
+          HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" "$SERVICE_URL/")
           echo "Health check HTTP response code: $HTTP_CODE"
+          if [ "$HTTP_CODE" != "200" ]; then
+            echo "Warning: Response code $HTTP_CODE"
+          fi
 
       - name: Register URL to GAS Properties (gas-url-sync)
-        if: always()
         run: |
           SERVICE_URL=$(gcloud run services describe ${{ env.SERVICE_NAME }} --project ${{ env.PROJECT_ID }} --region ${{ env.REGION }} --format="value(status.url)")
           echo "Cloud Run Service URL: $SERVICE_URL"
