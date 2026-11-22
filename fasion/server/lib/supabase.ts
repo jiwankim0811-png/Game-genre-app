@@ -79,7 +79,8 @@ export async function upsertGenreDb(genre: Genre): Promise<{ success: boolean; d
       const { data, error } = await supabaseAdmin
         .from('genres')
         .upsert(genre, { onConflict: 'slug' })
-        .select()\n        .single();
+        .select()
+        .single();
       if (error) throw error;
       return { success: true, data: data as Genre };
     } catch (err: any) {
