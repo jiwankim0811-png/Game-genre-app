@@ -10,8 +10,8 @@ RUN apk add --no-cache libc6-compat
 # ==========================================
 FROM base AS deps
 WORKDIR /app
-COPY package.json package-lock.json ./
-RUN npm ci
+COPY package.json package-lock.json* ./
+RUN npm install
 
 # ==========================================
 # 3. Builder Stage
@@ -20,6 +20,9 @@ FROM base AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
+
+# Ensure public directory exists to avoid COPY failure
+RUN mkdir -p /app/public
 
 # Environment variables needed during build time (placeholder values)
 ENV NEXT_TELEMETRY_DISABLED=1
@@ -43,7 +46,7 @@ RUN addgroup --system --gid 1001 nodejs && \
     adduser --system --uid 1001 nextjs
 
 # Copy static assets and standalone server
-COPY --from=builder /app/public ./public 2>/dev/null || true
+COPY --from=builder /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
