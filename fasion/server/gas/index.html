@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>장르나침반 (GenreCompass)</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-secondary-container": "#b0b2ff",
+          "on-primary-fixed": "#001f26",
+          "surface-container-highest": "#31353e",
+          "secondary-fixed-dim": "#c0c1ff",
+          "surface-dim": "#0f131c",
+          "surface-container-lowest": "#0a0e16",
+          "on-background": "#dfe2ee",
+          "on-surface-variant": "#bcc9cd",
+          "surface-bright": "#353942",
+          "error-container": "#93000a",
+          "secondary": "#c0c1ff",
+          "outline": "#869397",
+          "primary": "#4cd7f6",
+          "on-tertiary": "#003824",
+          "primary-fixed": "#acedff",
+          "secondary-container": "#3131c0",
+          "surface-tint": "#4cd7f6",
+          "tertiary-container": "#1bbd85",
+          "on-error": "#690005",
+          "on-tertiary-fixed-variant": "#005236",
+          "error": "#ffb4ab",
+          "on-primary-container": "#00424f",
+          "inverse-primary": "#00687a",
+          "on-secondary-fixed-variant": "#2f2ebe",
+          "background": "#0f131c",
+          "inverse-surface": "#dfe2ee",
+          "outline-variant": "#3d494c",
+          "on-tertiary-container": "#00452e",
+          "on-surface": "#dfe2ee",
+          "on-secondary-fixed": "#07006c",
+          "surface-container": "#1c2028",
+          "surface-variant": "#31353e",
+          "primary-fixed-dim": "#4cd7f6",
+          "tertiary-fixed": "#6ffbbe",
+          "tertiary": "#4edea3",
+          "on-error-container": "#ffdad6",
+          "on-primary-fixed-variant": "#004e5c",
+          "primary-container": "#06b6d4",
+          "on-primary": "#003640",
+          "tertiary-fixed-dim": "#4edea3",
+          "surface-container-high": "#262a33",
+          "inverse-on-surface": "#2c3039",
+          "secondary-fixed": "#e1e0ff",
+          "on-secondary": "#1000a9",
+          "surface-container-low": "#181c24",
+          "surface": "#0f131c",
+          "on-tertiary-fixed": "#002113"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-xs": "0.25rem",
+          "gutter": "1.25rem",
+          "space-xl": "2.5rem",
+          "gutter-desktop": "1.75rem",
+          "space-md": "1rem",
+          "margin": "1rem",
+          "margin-tablet": "2rem",
+          "space-lg": "1.5rem",
+          "margin-desktop": "3rem",
+          "space-sm": "0.5rem"
+        },
+        "fontFamily": {
+          "label-md": [
+            "JetBrains Mono"
+          ],
+          "headline-lg-mobile": [
+            "Space Grotesk"
+          ],
+          "body-md": [
+            "Hanken Grotesk"
+          ],
+          "headline-sm": [
+            "Space Grotesk"
+          ],
+          "display-lg-mobile": [
+            "Space Grotesk"
+          ],
+          "headline-lg": [
+            "Space Grotesk"
+          ],
+          "headline-md": [
+            "Space Grotesk"
+          ],
+          "body-sm": [
+            "Hanken Grotesk"
+          ],
+          "label-sm": [
+            "JetBrains Mono"
+          ],
+          "label-lg": [
+            "JetBrains Mono"
+          ],
+          "body-lg": [
+            "Hanken Grotesk"
+          ],
+          "display-lg": [
+            "Space Grotesk"
+          ]
+        },
+        "fontSize": {
+          "label-md": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.06em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-lg-mobile": [
+            "26px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-md": [
+            "15px",
+            {
+              "lineHeight": "24px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-sm": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "fontWeight": "500"
+            }
+          ],
+          "display-lg-mobile": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-lg": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-md": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "400"
+            }
+          ],
+          "label-sm": [
+            "10px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.08em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-lg": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-lg": [
+            "18px",
+            {
+              "lineHeight": "28px",
+              "fontWeight": "400"
+            }
+          ],
+          "display-lg": [
+            "48px",
+            {
+              "lineHeight": "56px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ]
+        }
+      }
+    }
+  };</script></head><body class="bg-surface font-body-md text-on-surface min-h-screen selection:bg-primary selection:text-on-primary-container"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_12px_rgba(6,182,212,0.1)]"><div class="h-20 w-full px-gutter-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md min-w-max"><img alt="GenreCompass Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrB52DFbozWZ0xa2v2QTXkD0uvb1C-0fsV-cqvS3UQl0Q5De0a_2Ssfjmrk0g5y0MjCnZ30Y-AF9sqy3rep8s64RTjTmaq0UIGHyZgmPjvBVr2U-QOnLaWcWWD97YwFsvwr52CHDcu6TEnLXzfsydlLKKvV_iy9uwj-0bIUZqE6EM7piZad4cZtCaivjkLDDNNm1GrrD2-A-YSw_Uaey6vZLmoJ3yQl-6c7A"/><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">장르나침반</span><span class="font-label-sm text-label-sm text-primary tracking-widest">GENRECOMM-PASS</span></div><span class="font-body-sm text-body-sm text-on-surface-variant hidden sm:inline-block">내 취향 좌표로 찾는 게임 장르</span></div></div><div class="hidden xl:flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs rounded-full shadow-[0_1px_8px_rgba(0,0,0,0.2)]"><span class="font-label-sm text-label-sm text-outline px-space-xs">난이도</span><button class="font-label-md text-label-md text-primary bg-primary-container/20 px-space-sm py-space-xs rounded-full" type="button">전체</button><button class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface px-space-sm py-space-xs rounded-full transition-colors" type="button">입문</button><button class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface px-space-sm py-space-xs rounded-full transition-colors" type="button">보통</button><button class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface px-space-sm py-space-xs rounded-full transition-colors" type="button">매니아</button></div><div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs rounded-full shadow-[0_1px_8px_rgba(0,0,0,0.2)]"><span class="font-label-sm text-label-sm text-outline px-space-xs">타임</span><button class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface px-space-sm py-space-xs rounded-full transition-colors" type="button">단판</button><button class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface px-space-sm py-space-xs rounded-full transition-colors" type="button">중기</button><button class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface px-space-sm py-space-xs rounded-full transition-colors" type="button">장기</button></div></div><nav class="hidden lg:flex items-center gap-space-lg" data-active-classes="text-primary font-bold"><a aria-current="page" class="transition-colors text-primary font-bold" data-path="genre-matrix-navigator" href="#">좌표 탐색기</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="genre-versus-comparison" href="#">장르 비교</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="taxonomy-archive" href="#">장르 사전</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="user-recommendations" href="#">맞춤 추천</a></nav><div class="flex items-center gap-space-sm"><div class="hidden md:flex items-center gap-space-xs bg-surface-container-high px-space-md py-space-xs rounded-full text-on-surface-variant shadow-[0_1px_8px_rgba(0,0,0,0.15)]"><span class="material-symbols-outlined text-[18px] text-outline">search</span><span class="font-body-sm text-body-sm text-outline">장르/게임 검색</span><kbd class="font-label-sm text-label-sm bg-surface-container-lowest text-primary px-space-xs py-0.5 rounded">Ctrl+K</kbd></div><a class="flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-secondary-container text-on-secondary shadow-[0_0_12px_rgba(99,102,241,0.45)] hover:bg-secondary hover:text-on-secondary-fixed transition-all font-label-md text-label-md" data-path="genre-versus-comparison" href="#"><span class="material-symbols-outlined text-[16px]">compare_arrows</span><span>장르 1:1 비교 (VS)</span></a><a class="w-8 h-8 rounded-full bg-primary flex items-center justify-center transition-transform hover:scale-105" data-path="admin-taxonomy-studio" href="#"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></a></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-140px)]"><div class="flex flex-col w-full">
+<!-- TOP TELEMETRY & FILTER CONTROLS BAR -->
+<section class="w-full bg-surface-container-low px-gutter-desktop py-space-sm shadow-md">
+<div class="w-full max-w-[1720px] mx-auto flex flex-col gap-space-sm">
+<!-- Primary Coordinate Quadrant Selector Chips -->
+<div class="flex items-center justify-between gap-space-sm flex-wrap">
+<div class="flex items-center gap-space-xs overflow-x-auto py-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider flex items-center gap-1 mr-1">
+<span class="material-symbols-outlined text-[14px] text-primary">explore</span>사분면
+          </span>
+<button class="quad-btn active font-label-md text-label-md px-space-md py-1.5 rounded-full transition-all bg-primary text-on-primary font-bold shadow-sm" id="quad-filter-all" onclick="filterQuadrant('ALL')">
+            전체 사분면
+          </button>
+<button class="quad-btn font-label-md text-label-md px-space-md py-1.5 rounded-full transition-all bg-surface-container text-on-surface-variant hover:text-on-surface" id="quad-filter-q3" onclick="filterQuadrant('Q3')">
+            [Q3] 피지컬 × 단판/몰입
+          </button>
+<button class="quad-btn font-label-md text-label-md px-space-md py-1.5 rounded-full transition-all bg-surface-container text-on-surface-variant hover:text-on-surface" id="quad-filter-q4" onclick="filterQuadrant('Q4')">
+            [Q4] 뇌지컬 × 단판/전술
+          </button>
+<button class="quad-btn font-label-md text-label-md px-space-md py-1.5 rounded-full transition-all bg-surface-container text-on-surface-variant hover:text-on-surface" id="quad-filter-q2" onclick="filterQuadrant('Q2')">
+            [Q2] 피지컬 × 서사/성장
+          </button>
+<button class="quad-btn font-label-md text-label-md px-space-md py-1.5 rounded-full transition-all bg-surface-container text-on-surface-variant hover:text-on-surface" id="quad-filter-q1" onclick="filterQuadrant('Q1')">
+            [Q1] 뇌지컬 × 서사/빌딩
+          </button>
+</div>
+<!-- Mode Toggle & Coordinate Telemetry readout -->
+<div class="flex items-center gap-space-sm">
+<div class="hidden lg:flex items-center gap-2 bg-surface-container-highest px-3 py-1 rounded-full text-primary font-label-sm text-label-sm">
+<span class="inline-block w-2 h-2 rounded-full bg-tertiary"></span>
+<span>좌표계: X[-100 ~ +100] / Y[-100 ~ +100]</span>
+</div>
+<!-- View Toggle -->
+<div class="inline-flex p-0.5 bg-surface-container-highest rounded-full">
+<button class="flex items-center gap-1 font-label-md text-label-md px-3 py-1 rounded-full bg-primary text-on-primary transition-all font-semibold" id="btn-view-map" onclick="switchMainView('map')">
+<span class="material-symbols-outlined text-[16px]">scatter_plot</span>
+<span class="hidden sm:inline">좌표 맵</span>
+</button>
+<button class="flex items-center gap-1 font-label-md text-label-md px-3 py-1 rounded-full text-on-surface-variant hover:text-on-surface transition-all" id="btn-view-cards" onclick="switchMainView('cards')">
+<span class="material-symbols-outlined text-[16px]">grid_view</span>
+<span class="hidden sm:inline">장르 카드</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Secondary Search & Parametric Filters -->
+<div class="flex items-center justify-between gap-space-sm flex-wrap">
+<div class="flex items-center gap-space-xs flex-1 min-w-[280px] max-w-md bg-surface-container-highest px-space-md py-1.5 rounded-full">
+<span class="material-symbols-outlined text-outline text-[18px]">search</span>
+<input class="w-full bg-transparent text-on-surface font-body-sm text-body-sm focus:outline-none placeholder:text-outline" id="genre-search-input" onkeyup="handleGenreSearch(this.value)" placeholder="장르명, 키워드(예: 하데스, 문명, 패링) 검색..." type="text"/>
+<button class="text-outline hover:text-on-surface text-[14px]" onclick="clearSearch()">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs flex-wrap">
+<!-- Difficulty Dropdown Filter -->
+<div class="relative">
+<select class="appearance-none bg-surface-container-high text-on-surface font-label-md text-label-md pl-3 pr-8 py-1.5 rounded-full focus:outline-none cursor-pointer" id="diff-filter" onchange="applyFilters()">
+<option value="ALL">난이도: 전체</option>
+<option value="EASY">순한맛 (입문 친화)</option>
+<option value="MEDIUM">보통 (적정 컨트롤)</option>
+<option value="HARD">매운맛 (하드코어)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2 text-[14px] text-outline pointer-events-none">expand_more</span>
+</div>
+<!-- Playtime Dropdown Filter -->
+<div class="relative">
+<select class="appearance-none bg-surface-container-high text-on-surface font-label-md text-label-md pl-3 pr-8 py-1.5 rounded-full focus:outline-none cursor-pointer" id="time-filter" onchange="applyFilters()">
+<option value="ALL">플레이타임: 전체</option>
+<option value="SHORT">단판 (15~40분)</option>
+<option value="MID">중기 (10~30시간)</option>
+<option value="LONG">장기 (50시간 이상)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2 text-[14px] text-outline pointer-events-none">expand_more</span>
+</div>
+<!-- Tags Quick Chips -->
+<div class="hidden md:flex items-center gap-1">
+<button class="filter-tag-chip font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface" onclick="toggleTagFilter(this, '로그류')">#로그류</button>
+<button class="filter-tag-chip font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface" onclick="toggleTagFilter(this, '싱글플레이')">#싱글스토리</button>
+<button class="filter-tag-chip font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface" onclick="toggleTagFilter(this, '멀티경쟁')">#멀티경쟁</button>
+</div>
+<!-- Compare Launcher Trigger -->
+<button class="flex items-center gap-1 font-label-md text-label-md px-3 py-1.5 rounded-full bg-secondary-container text-on-secondary hover:bg-secondary hover:text-on-secondary-fixed transition-colors font-medium" onclick="openCompareModal('로그라이크', '로그라이트')">
+<span class="material-symbols-outlined text-[16px]">compare_arrows</span>
+<span>1:1 VS 비교</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- MAIN DUAL-STAGE CONTENT AREA (MAP VIEW + DETAIL DRAWER) -->
+<main class="w-full max-w-[1720px] mx-auto px-gutter-desktop py-space-md grid grid-cols-1 xl:grid-cols-12 gap-space-lg relative min-h-[calc(100vh-170px)]">
+<!-- LEFT 7 COLS: 2-AXIS INTERACTIVE COORDINATE COMPASS STAGE -->
+<div class="xl:col-span-7 flex flex-col gap-space-sm" id="interactive-stage-container">
+<!-- Coordinate Compass HUD Stage -->
+<div class="relative w-full aspect-[4/3] md:aspect-square max-h-[760px] bg-surface-container-lowest rounded-xl overflow-hidden shadow-xl select-none">
+<!-- Live Coordinate Hover Telemetry Overlay -->
+<div class="absolute top-3 left-3 z-30 pointer-events-none flex items-center gap-2 bg-surface-container-high/90 backdrop-blur-md px-3 py-1.5 rounded-full shadow-md">
+<span class="material-symbols-outlined text-primary text-[16px]">my_location</span>
+<span class="font-label-md text-label-md text-on-surface" id="live-coords">POINTER: X: -10 | Y: -20 (Q3 경계)</span>
+</div>
+<!-- Compass Cardinal Edge Labels -->
+<div class="absolute top-2 left-1/2 -translate-x-1/2 z-20 pointer-events-none text-center">
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest bg-surface-container-high/80 px-2.5 py-0.5 rounded-full">▲ Y: 장기 / 서사 &amp; 영구 성장 (+100)</span>
+</div>
+<div class="absolute bottom-2 left-1/2 -translate-x-1/2 z-20 pointer-events-none text-center">
+<span class="font-label-sm text-label-sm text-error uppercase tracking-widest bg-surface-container-high/80 px-2.5 py-0.5 rounded-full">▼ Y: 단판 / 즉각 몰입 &amp; 휘발성 (-100)</span>
+</div>
+<div class="absolute left-2 top-1/2 -translate-y-1/2 z-20 pointer-events-none -rotate-90 origin-left">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest bg-surface-container-high/80 px-2.5 py-0.5 rounded-full">◄ X: 피지컬 / 실시간 조작 (-100)</span>
+</div>
+<div class="absolute right-2 top-1/2 -translate-y-1/2 z-20 pointer-events-none rotate-90 origin-right">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest bg-surface-container-high/80 px-2.5 py-0.5 rounded-full">► X: 뇌지컬 / 전략 &amp; 설계 (+100)</span>
+</div>
+<!-- 4 Quadrant Background Tonal Zones -->
+<div class="absolute inset-0 grid grid-cols-2 grid-rows-2 opacity-30 pointer-events-none">
+<!-- Q2 (Top-Left): 피지컬 x 서사/성장 -->
+<div class="bg-gradient-to-br from-tertiary-container/20 to-transparent p-4 flex flex-col justify-start items-start">
+<span class="font-label-sm text-label-sm text-tertiary bg-surface-container/60 px-2 py-0.5 rounded">Q2 · 피지컬 × 서사 성장</span>
+</div>
+<!-- Q1 (Top-Right): 뇌지컬 x 서사/빌딩 -->
+<div class="bg-gradient-to-bl from-primary-container/20 to-transparent p-4 flex flex-col justify-start items-end">
+<span class="font-label-sm text-label-sm text-primary bg-surface-container/60 px-2 py-0.5 rounded">Q1 · 뇌지컬 × 대서사 빌딩</span>
+</div>
+<!-- Q3 (Bottom-Left): 피지컬 x 단판/몰입 -->
+<div class="bg-gradient-to-tr from-error-container/20 to-transparent p-4 flex flex-col justify-end items-start">
+<span class="font-label-sm text-label-sm text-error bg-surface-container/60 px-2 py-0.5 rounded">Q3 · 피지컬 × 단판 몰입</span>
+</div>
+<!-- Q4 (Bottom-Right): 뇌지컬 x 단판/전술 -->
+<div class="bg-gradient-to-tl from-secondary-container/20 to-transparent p-4 flex flex-col justify-end items-end">
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container/60 px-2 py-0.5 rounded">Q4 · 뇌지컬 × 단판 전술</span>
+</div>
+</div>
+<!-- SVG Visual Plane: Concentric Rings, Crosshairs, Lineage Lines -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" id="coordinate-svg" viewbox="-100 -100 200 200">
+<defs>
+<radialgradient cx="50%" cy="50%" id="origin-glow" r="50%">
+<stop offset="0%" stop-color="#4cd7f6" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="#4cd7f6" stop-opacity="0"></stop>
+</radialgradient>
+</defs>
+<!-- Concentric Radar Distance Rings -->
+<circle cx="0" cy="0" fill="none" r="25" stroke="#3d494c" stroke-dasharray="2 3" stroke-width="0.5"></circle>
+<circle cx="0" cy="0" fill="none" r="50" stroke="#3d494c" stroke-dasharray="2 3" stroke-width="0.5"></circle>
+<circle cx="0" cy="0" fill="none" r="75" stroke="#3d494c" stroke-dasharray="2 3" stroke-width="0.5"></circle>
+<circle cx="0" cy="0" fill="none" r="95" stroke="#3d494c" stroke-width="0.8"></circle>
+<circle cx="0" cy="0" fill="url(#origin-glow)" r="20"></circle>
+<!-- Axis Crosshairs (Inverted Y for Cartesian coordinate conversion: Y+ is up, so SVG Y is negated) -->
+<line stroke="#869397" stroke-opacity="0.4" stroke-width="0.75" x1="-100" x2="100" y1="0" y2="0"></line>
+<line stroke="#869397" stroke-opacity="0.4" stroke-width="0.75" x1="0" x2="0" y1="-100" y2="100"></line>
+<!-- Axis Origin (0,0) Target Marker -->
+<circle cx="0" cy="0" fill="#4cd7f6" r="1.5"></circle>
+<!-- Lineage Connections between related genres -->
+<!-- 로그라이트 (-10, -20) -> 덱빌딩 (+50, -30) -->
+<path d="M -10 20 Q 20 28 50 30" fill="none" stroke="#4cd7f6" stroke-dasharray="2 2" stroke-opacity="0.6" stroke-width="0.75"></path>
+<!-- 로그라이트 (-10, -20) -> 소울라이크 (-65, 60) -->
+<path d="M -10 20 Q -40 0 -65 -60" fill="none" stroke="#1bbd85" stroke-dasharray="2 2" stroke-opacity="0.4" stroke-width="0.75"></path>
+<!-- 소울라이크 (-65, 60) -> 메트로배니아 (-45, 40) -->
+<line stroke="#1bbd85" stroke-opacity="0.5" stroke-width="0.75" x1="-65" x2="-45" y1="-60" y2="-40"></line>
+<!-- 덱빌딩 (+50, -30) -> 오토배틀러 (+35, -50) -->
+<line stroke="#c0c1ff" stroke-opacity="0.5" stroke-width="0.75" x1="50" x2="35" y1="30" y2="50"></line>
+<!-- CRPG (+60, 80) -> 4X (+85, 75) -->
+<line stroke="#4cd7f6" stroke-opacity="0.5" stroke-width="0.75" x1="60" x2="85" y1="-80" y2="-75"></line>
+</svg>
+<!-- INTERACTIVE COORDINATE GENRE NODES (Positioned by %: Left = (X+100)/2%, Top = (100-Y)/2%) -->
+<div class="absolute inset-0 z-20 pointer-events-auto" id="nodes-canvas" onmousemove="updateCoordinateHUD(event)">
+<!-- Node 1: 로그라이트 (X: -10, Y: -20) => Left: 45%, Top: 60% [SELECTED / HERO NODE] -->
+<div class="genre-node active absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer transition-all duration-300" data-diff="MEDIUM" data-genre="roguelite" data-quad="Q3" data-tags="로그류,싱글플레이" data-time="SHORT" id="node-roguelite" onclick="selectGenre('roguelite')" style="left: 45%; top: 60%;">
+<div class="relative flex items-center group">
+<!-- Animated Ripple Ring -->
+<span class="absolute -inset-3 rounded-full bg-primary/20 animate-ping"></span>
+<span class="relative flex h-6 w-6 items-center justify-center rounded-full bg-primary shadow-lg shadow-primary/50 ring-4 ring-primary/30">
+<span class="material-symbols-outlined text-on-primary text-[14px]">refresh</span>
+</span>
+<!-- Node Floating Badge -->
+<div class="ml-2 px-2.5 py-1 rounded-md bg-surface-container-high/90 border border-primary/40 backdrop-blur-md shadow-lg group-hover:scale-105 transition-transform">
+<p class="font-headline-sm text-[13px] leading-tight text-primary font-bold">로그라이트</p>
+<span class="font-label-sm text-label-sm text-on-surface-variant">[-10, -20]</span>
+</div>
+</div>
+</div>
+<!-- Node 2: 덱빌딩 로그라이크 (X: +50, Y: -30) => Left: 75%, Top: 65% -->
+<div class="genre-node absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer transition-all duration-300" data-diff="MEDIUM" data-genre="deckbuilder" data-quad="Q4" data-tags="로그류,싱글플레이" data-time="SHORT" id="node-deckbuilder" onclick="selectGenre('deckbuilder')" style="left: 75%; top: 65%;">
+<div class="relative flex items-center group">
+<span class="relative flex h-5 w-5 items-center justify-center rounded-full bg-secondary-container shadow-md group-hover:ring-4 group-hover:ring-secondary/40 transition-all">
+<span class="material-symbols-outlined text-secondary text-[12px]">style</span>
+</span>
+<div class="ml-2 px-2 py-0.5 rounded-md bg-surface-container-high/80 backdrop-blur-md shadow-sm group-hover:bg-surface-container-high">
+<p class="font-headline-sm text-[12px] leading-tight text-on-surface font-semibold">덱빌딩 로그</p>
+<span class="font-label-sm text-label-sm text-outline">[+50, -30]</span>
+</div>
+</div>
+</div>
+<!-- Node 3: 메트로배니아 (X: -45, Y: +40) => Left: 27.5%, Top: 30% -->
+<div class="genre-node absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer transition-all duration-300" data-diff="HARD" data-genre="metroidvania" data-quad="Q2" data-tags="싱글플레이" data-time="MID" id="node-metroidvania" onclick="selectGenre('metroidvania')" style="left: 27.5%; top: 30%;">
+<div class="relative flex items-center group">
+<span class="relative flex h-5 w-5 items-center justify-center rounded-full bg-tertiary-container shadow-md group-hover:ring-4 group-hover:ring-tertiary/40 transition-all">
+<span class="material-symbols-outlined text-on-tertiary text-[12px]">map</span>
+</span>
+<div class="ml-2 px-2 py-0.5 rounded-md bg-surface-container-high/80 backdrop-blur-md shadow-sm group-hover:bg-surface-container-high">
+<p class="font-headline-sm text-[12px] leading-tight text-on-surface font-semibold">메트로배니아</p>
+<span class="font-label-sm text-label-sm text-outline">[-45, +40]</span>
+</div>
+</div>
+</div>
+<!-- Node 4: 소울라이크 (X: -65, Y: +60) => Left: 17.5%, Top: 20% -->
+<div class="genre-node absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer transition-all duration-300" data-diff="HARD" data-genre="soulslike" data-quad="Q2" data-tags="싱글플레이" data-time="MID" id="node-soulslike" onclick="selectGenre('soulslike')" style="left: 17.5%; top: 20%;">
+<div class="relative flex items-center group">
+<span class="relative flex h-5 w-5 items-center justify-center rounded-full bg-tertiary-container shadow-md group-hover:ring-4 group-hover:ring-tertiary/40 transition-all">
+<span class="material-symbols-outlined text-on-tertiary text-[12px]">swords</span>
+</span>
+<div class="ml-2 px-2 py-0.5 rounded-md bg-surface-container-high/80 backdrop-blur-md shadow-sm group-hover:bg-surface-container-high">
+<p class="font-headline-sm text-[12px] leading-tight text-on-surface font-semibold">소울라이크</p>
+<span class="font-label-sm text-label-sm text-outline">[-65, +60]</span>
+</div>
+</div>
+</div>
+<!-- Node 5: 4X 전략 (X: +85, Y: +75) => Left: 92.5%, Top: 12.5% -->
+<div class="genre-node absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer transition-all duration-300" data-diff="HARD" data-genre="4x" data-quad="Q1" data-tags="싱글플레이,멀티경쟁" data-time="LONG" id="node-4x" onclick="selectGenre('4x')" style="left: 92.5%; top: 12.5%;">
+<div class="relative flex items-center group">
+<span class="relative flex h-5 w-5 items-center justify-center rounded-full bg-primary-container shadow-md group-hover:ring-4 group-hover:ring-primary/40 transition-all">
+<span class="material-symbols-outlined text-on-primary text-[12px]">public</span>
+</span>
+<div class="ml-2 px-2 py-0.5 rounded-md bg-surface-container-high/80 backdrop-blur-md shadow-sm group-hover:bg-surface-container-high">
+<p class="font-headline-sm text-[12px] leading-tight text-on-surface font-semibold">4X 전략 (문명류)</p>
+<span class="font-label-sm text-label-sm text-outline">[+85, +75]</span>
+</div>
+</div>
+</div>
+<!-- Node 6: CRPG (X: +60, Y: +80) => Left: 80%, Top: 10% -->
+<div class="genre-node absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer transition-all duration-300" data-diff="HARD" data-genre="crpg" data-quad="Q1" data-tags="싱글플레이" data-time="LONG" id="node-crpg" onclick="selectGenre('crpg')" style="left: 80%; top: 10%;">
+<div class="relative flex items-center group">
+<span class="relative flex h-5 w-5 items-center justify-center rounded-full bg-primary-container shadow-md group-hover:ring-4 group-hover:ring-primary/40 transition-all">
+<span class="material-symbols-outlined text-on-primary text-[12px]">menu_book</span>
+</span>
+<div class="ml-2 px-2 py-0.5 rounded-md bg-surface-container-high/80 backdrop-blur-md shadow-sm group-hover:bg-surface-container-high">
+<p class="font-headline-sm text-[12px] leading-tight text-on-surface font-semibold">CRPG (발더스류)</p>
+<span class="font-label-sm text-label-sm text-outline">[+60, +80]</span>
+</div>
+</div>
+</div>
+<!-- Node 7: 배틀로얄 (X: -55, Y: -65) => Left: 22.5%, Top: 82.5% -->
+<div class="genre-node absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer transition-all duration-300" data-diff="MEDIUM" data-genre="battleroyale" data-quad="Q3" data-tags="멀티경쟁" data-time="SHORT" id="node-battleroyale" onclick="selectGenre('battleroyale')" style="left: 22.5%; top: 82.5%;">
+<div class="relative flex items-center group">
+<span class="relative flex h-5 w-5 items-center justify-center rounded-full bg-error shadow-md group-hover:ring-4 group-hover:ring-error/40 transition-all">
+<span class="material-symbols-outlined text-on-error text-[12px]">save_as</span>
+</span>
+<div class="ml-2 px-2 py-0.5 rounded-md bg-surface-container-high/80 backdrop-blur-md shadow-sm group-hover:bg-surface-container-high">
+<p class="font-headline-sm text-[12px] leading-tight text-on-surface font-semibold">배틀로얄</p>
+<span class="font-label-sm text-label-sm text-outline">[-55, -65]</span>
+</div>
+</div>
+</div>
+<!-- Node 8: 오토배틀러 (X: +35, Y: -50) => Left: 67.5%, Top: 75% -->
+<div class="genre-node absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer transition-all duration-300" data-diff="MEDIUM" data-genre="autobattler" data-quad="Q4" data-tags="멀티경쟁" data-time="SHORT" id="node-autobattler" onclick="selectGenre('autobattler')" style="left: 67.5%; top: 75%;">
+<div class="relative flex items-center group">
+<span class="relative flex h-5 w-5 items-center justify-center rounded-full bg-secondary shadow-md group-hover:ring-4 group-hover:ring-secondary/40 transition-all">
+<span class="material-symbols-outlined text-on-secondary text-[12px]">smart_toy</span>
+</span>
+<div class="ml-2 px-2 py-0.5 rounded-md bg-surface-container-high/80 backdrop-blur-md shadow-sm group-hover:bg-surface-container-high">
+<p class="font-headline-sm text-[12px] leading-tight text-on-surface font-semibold">오토배틀러</p>
+<span class="font-label-sm text-label-sm text-outline">[+35, -50]</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Quadrant Mini Legends (Corner HUDs) -->
+<div class="absolute bottom-3 right-3 z-30 pointer-events-none hidden sm:flex items-center gap-3 bg-surface-container-lowest/80 backdrop-blur-md px-3 py-1.5 rounded-lg text-outline font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary"></span>조작형</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-secondary"></span>지략형</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-tertiary"></span>성장형</span>
+</div>
+</div>
+<!-- Quick Guidance Ticker bar under map -->
+<div class="w-full bg-surface-container p-space-sm rounded-lg flex items-center justify-between gap-space-sm text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">tips_and_updates</span>
+<span>원하는 장르 노드를 클릭하면 우측 <strong>상세 리포트</strong>와 <strong>대표 입문작</strong>이 즉시 동기화됩니다.</span>
+</div>
+<div class="hidden sm:flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-outline">단축키: 노드 클릭 or 마우스 호버</span>
+</div>
+</div>
+</div>
+<!-- ALTERNATE GRID VIEW (Shown when user toggles '장르 카드') -->
+<div class="hidden xl:col-span-7 grid-cols-1 sm:grid-cols-2 gap-space-md" id="cards-stage-container">
+<!-- Generated/Dynamic Cards mapped here -->
+<div class="cursor-pointer bg-surface-container hover:bg-surface-container-high p-space-md rounded-xl transition-all shadow-md flex flex-col justify-between" onclick="selectGenre('roguelite')">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-primary px-2 py-0.5 rounded-full bg-primary/10">Q3 · 단판 몰입형</span>
+<span class="font-label-sm text-label-sm text-tertiary">난이도: 보통</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">로그라이트 (Roguelite)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">사망 후에도 영구 성장을 챙겨 재도전하는 현대적인 액션 루프.</p>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">대표작: 하데스, 데드셀</span>
+<span class="material-symbols-outlined text-primary text-[18px]">arrow_forward</span>
+</div>
+</div>
+<div class="cursor-pointer bg-surface-container hover:bg-surface-container-high p-space-md rounded-xl transition-all shadow-md flex flex-col justify-between" onclick="selectGenre('soulslike')">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-tertiary px-2 py-0.5 rounded-full bg-tertiary/10">Q2 · 서사 성장형</span>
+<span class="font-label-sm text-label-sm text-error">난이도: 매운맛</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">소울라이크 (Soulslike)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">가혹한 판정과 학습, 극한의 성취감을 선사하는 다크 판타지 액션.</p>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">대표작: 엘든 링, 다크소울</span>
+<span class="material-symbols-outlined text-tertiary text-[18px]">arrow_forward</span>
+</div>
+</div>
+<div class="cursor-pointer bg-surface-container hover:bg-surface-container-high p-space-md rounded-xl transition-all shadow-md flex flex-col justify-between" onclick="selectGenre('deckbuilder')">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-secondary px-2 py-0.5 rounded-full bg-secondary/10">Q4 · 단판 전술형</span>
+<span class="font-label-sm text-label-sm text-tertiary">난이도: 보통</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">덱빌딩 로그라이크</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">매 판 주어지는 카드 시너지와 유물로 나만의 필승 콤보를 설계하는 지략 게임.</p>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">대표작: 슬레이 더 스파이어</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">arrow_forward</span>
+</div>
+</div>
+<div class="cursor-pointer bg-surface-container hover:bg-surface-container-high p-space-md rounded-xl transition-all shadow-md flex flex-col justify-between" onclick="selectGenre('4x')">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-primary px-2 py-0.5 rounded-full bg-primary/10">Q1 · 대서사 빌딩</span>
+<span class="font-label-sm text-label-sm text-error">난이도: 매운맛</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">4X 전략 시뮬레이션</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">탐험, 확장, 착취, 섬멸. 한 번 빠져들면 해가 뜨는 거대한 문명 경영.</p>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">대표작: 문명 6, 스텔라리스</span>
+<span class="material-symbols-outlined text-primary text-[18px]">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- RIGHT 5 COLS: DEDICATED GENRE DEEP DIVE REPORT PANEL -->
+<div class="xl:col-span-5 bg-surface-container p-space-lg rounded-xl flex flex-col gap-space-lg shadow-xl relative overflow-y-auto max-h-[860px]" id="genre-detail-panel">
+<!-- Panel Header & Quick Meta -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary bg-primary/10 px-2.5 py-0.5 rounded-full font-bold" id="detail-quadrant-badge">
+              사분면: Q3~Q4 경계형
+            </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-highest px-2 py-0.5 rounded-full" id="detail-coordinate-badge">
+              좌표 [X: -10 | Y: -20]
+            </span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded-full hover:bg-surface-container-highest text-on-surface-variant transition-colors" onclick="shareGenreReport()" title="공유하기">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+<button class="p-1.5 rounded-full hover:bg-surface-container-highest text-outline transition-colors" onclick="toggleBookmark(this)" title="즐겨찾기">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+</button>
+</div>
+</div>
+<div class="flex items-baseline gap-2 mt-1">
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight" id="detail-title">로그라이트</h2>
+<span class="font-label-lg text-label-lg text-outline" id="detail-subtitle">Roguelite</span>
+</div>
+</div>
+<!-- STEP 1: 직관적 비유 & 성향 체크리스트 -->
+<div class="flex flex-col gap-space-sm bg-surface-container-low p-space-md rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">psychology</span>
+<span class="font-label-md text-label-md text-primary uppercase font-bold tracking-wider">[Step 1] 직관적 비유 &amp; 게이머 성향 분석</span>
+</div>
+<blockquote class="font-body-lg text-body-lg text-on-surface italic pl-3 border-l-2 border-primary/60 my-1" id="detail-analogy">
+          “죽을 때마다 조금씩 강해져서 돌아오는 불사신 러닝 액션”
+        </blockquote>
+<!-- Checklist Pair -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm mt-2">
+<!-- Recommended For -->
+<div class="bg-surface-container-highest/60 p-space-sm rounded-lg flex flex-col gap-1.5">
+<div class="flex items-center gap-1.5 text-tertiary font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[16px]">thumb_up</span>
+<span>이런 분께 추천</span>
+</div>
+<ul class="space-y-1 font-body-sm text-body-sm text-on-surface-variant" id="detail-pros-list">
+<li class="flex items-start gap-1.5">
+<span class="text-tertiary text-xs">✓</span>
+<span>짧고 굵은 한 판(30분 내외) 몰입을 선호하는 분</span>
+</li>
+<li class="flex items-start gap-1.5">
+<span class="text-tertiary text-xs">✓</span>
+<span>반복 실패에서 좌절 대신 학습의 쾌감을 느끼는 분</span>
+</li>
+<li class="flex items-start gap-1.5">
+<span class="text-tertiary text-xs">✓</span>
+<span>매 판 새로운 무기·스킬 빌드 조합을 탐구하는 분</span>
+</li>
+</ul>
+</div>
+<!-- Not Recommended For -->
+<div class="bg-surface-container-highest/60 p-space-sm rounded-lg flex flex-col gap-1.5">
+<div class="flex items-center gap-1.5 text-error font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[16px]">thumb_down</span>
+<span>이런 분은 피하세요</span>
+</div>
+<ul class="space-y-1 font-body-sm text-body-sm text-on-surface-variant" id="detail-cons-list">
+<li class="flex items-start gap-1.5">
+<span class="text-error text-xs">✕</span>
+<span>한 번 죽으면 자원이 증발하는 허탈감을 견디기 힘든 분</span>
+</li>
+<li class="flex items-start gap-1.5">
+<span class="text-error text-xs">✕</span>
+<span>정밀한 순발력과 빠른 회피 피로도가 높은 게이머</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- STEP 2: 핵심 플레이 루프 (Core Cyclic Diagram) -->
+<div class="flex flex-col gap-space-sm bg-surface-container-low p-space-md rounded-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">sync</span>
+<span class="font-label-md text-label-md text-secondary uppercase font-bold tracking-wider">[Step 2] 핵심 플레이 루프 (Core Loop)</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">순환 주기: 약 15~35분</span>
+</div>
+<!-- 4-Stage Interactive Cyclic Flow Chart -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-2 text-center">
+<div class="bg-surface-container p-2.5 rounded-lg flex flex-col items-center justify-center gap-1">
+<span class="material-symbols-outlined text-primary text-[22px]">explore</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">1. 탐험 &amp; 전투</span>
+<span class="font-body-sm text-[11px] text-outline leading-tight">랜덤 방 돌파 및 시너지 수집</span>
+</div>
+<div class="bg-surface-container p-2.5 rounded-lg flex flex-col items-center justify-center gap-1">
+<span class="material-symbols-outlined text-error text-[22px]">skull</span>
+<span class="font-label-sm text-label-sm text-error font-bold">2. 불가피한 사망</span>
+<span class="font-body-sm text-[11px] text-outline leading-tight">런 종료 및 진행도 정산</span>
+</div>
+<div class="bg-surface-container p-2.5 rounded-lg flex flex-col items-center justify-center gap-1">
+<span class="material-symbols-outlined text-tertiary text-[22px]">upgrade</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">3. 영구 스펙업</span>
+<span class="font-body-sm text-[11px] text-outline leading-tight">패시브·무기 메타프로그레스</span>
+</div>
+<div class="bg-surface-container p-2.5 rounded-lg flex flex-col items-center justify-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[22px]">rocket_launch</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">4. 강화된 재도전</span>
+<span class="font-body-sm text-[11px] text-outline leading-tight">더 깊은 스테이지 공략</span>
+</div>
+</div>
+</div>
+<!-- STEP 3: 대중작 연결고리 (Bridge to Popular Games) -->
+<div class="flex items-center gap-space-sm bg-primary/10 p-space-md rounded-lg">
+<span class="material-symbols-outlined text-primary text-[28px] shrink-0">connecting_airports</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">[Step 3] 게이머 익숙도 연결고리</span>
+<p class="font-body-sm text-body-sm text-on-surface" id="detail-bridge">
+            평소 <strong>‘디아블로의 핵앤슬래시 파밍’</strong>이나 <strong>‘리그 오브 레전드의 스킬 콤보’</strong>를 재미있게 즐기셨다면 최소한의 진입장벽으로 즉시 손맛을 느낄 수 있습니다.
+          </p>
+</div>
+</div>
+<!-- STEP 4: 입문~매니아 3단계 대표작 선별 (Tiered Game Showcase) -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[20px]">stars</span>
+<span class="font-label-md text-label-md text-tertiary uppercase font-bold tracking-wider">[Step 4] 난이도별 맞춤 추천 명작 3선</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">스팀 메타크리틱 검증작</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<!-- Game 1: 입문 (하데스) -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center gap-space-sm hover:bg-surface-container-highest/60 transition-colors">
+<div class="w-16 h-16 rounded bg-cover bg-center shrink-0" data-alt="Dynamic isometric digital artwork of Hades videogame, Zagreus brandishing a glowing fiery sword in the Underworld, dark moody neon red and cyan hues, cinematic game art style" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDXkggEyaK0yjgL4y6zQfzyY-t-N27QtT3wcoZ_0DhsW_OSgOSioNuIT1yvDeueY79lpFiXV__JNklowhjTVn-oOkOwae2tihSAPFEAB5PuR_o5uUvo3cvqlHJQj8H7QOzc-0GZX6fItGnAMbkiV12jCCrCwzs2loWPTTC44o3Q6QiC0Xlf57QpamOEx6iFQD1xqr93nSn9h5lm7K8zVVeaqn6R36kZLFRUW7yaKD4')"></div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-tertiary-container text-on-tertiary font-bold">순한맛 · 입문 추천</span>
+<span class="font-headline-sm text-[15px] font-bold text-on-surface truncate">하데스 (Hades)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">미려한 올림포스 서사, 사망 시 친절한 갓모드 보정 시스템 탑재</p>
+<div class="flex items-center gap-2 mt-1 font-label-sm text-label-sm text-outline">
+<span>Steam: 압도적으로 긍정적 (98%)</span>
+<span>평균 클리어: 25분</span>
+</div>
+</div>
+</div>
+<!-- Game 2: 표준 (데드 셀) -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center gap-space-sm hover:bg-surface-container-highest/60 transition-colors">
+<div class="w-16 h-16 rounded bg-cover bg-center shrink-0" data-alt="Pixel-art inspired stylized rogue-lite warrior character with flaming head rushing through a ruined gothic castle, electric violet and indigo neon lighting, high action tempo" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAkP7NPdX9HMX1bY2-rjiKq1LwSBHkUDwSfSq8VUlaqe28AOV86XxMNmBbg_2GpVWV-2mY4Vir7tDPw_jdEFAiYpYTG4Qv-UItQfmCuu9d5P6xTAyhWeCmCSNJMrjAVbe02RXAzUsbXfWcb1K9H1gQfbpiJzSouJl2jBUP4lKX1I6vrRfSXaTFms-bvUAMgvr6Q6kYCN-NdNkHMRj8odKPQ9A7FtaZdD6G-nnBZFro')"></div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary-container text-on-primary font-bold">중간맛 · 표준 도전</span>
+<span class="font-headline-sm text-[15px] font-bold text-on-surface truncate">데드 셀 (Dead Cells)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">스피디한 2D 플랫포머 타격감과 수백 종의 무기·돌연변이 조합</p>
+<div class="flex items-center gap-2 mt-1 font-label-sm text-label-sm text-outline">
+<span>Steam: 압도적으로 긍정적 (96%)</span>
+<span>파밍 밀도: 최상</span>
+</div>
+</div>
+</div>
+<!-- Game 3: 매니아 (노이타) -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center gap-space-sm hover:bg-surface-container-highest/60 transition-colors">
+<div class="w-16 h-16 rounded bg-cover bg-center shrink-0" data-alt="Dark fantasy robed pixel wizard standing in a deep cavern where every pixel simulates molten liquid, fire, acid and magic physics explosions, glowing teal and amber sparks" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBDehJIfZfJCSNg4KaXhmCw4Rpz7p1speT0QiVRyiDM8ogyO-eA-fDgrVCP3GdZ2DmJhYMOiBPKdrD5t-JLLUuCcep0KK5WG7XiakSYpWgpEnfgfXsmisFgGaikA_HiOvEaE1-AN5ZMSWakHfhZpW0PZpku6D0E8dQ4Or_OcNtMH5l43YJIZsOrECTklpokBEIKQ0J1LyL-CHSXNaxsUyAORErqYk0uxrFN5HQKEAM')"></div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-error-container text-on-error font-bold">매운맛 · 매니아</span>
+<span class="font-headline-sm text-[15px] font-bold text-on-surface truncate">노이타 (Noita)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">모든 픽셀이 물리 연산되는 극악의 자유도와 지팡이 주문 코딩</p>
+<div class="flex items-center gap-2 mt-1 font-label-sm text-label-sm text-outline">
+<span>Steam: 매우 긍정적 (95%)</span>
+<span>자유도: 극대화</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Panel CTA Buttons -->
+<div class="flex items-center gap-space-sm pt-2">
+<button class="flex-1 py-2.5 rounded-full bg-secondary-container text-on-secondary font-label-md text-label-md font-bold flex items-center justify-center gap-1.5 hover:bg-secondary hover:text-on-secondary-fixed transition-colors shadow-md" onclick="openCompareModal('로그라이크', '로그라이트')">
+<span class="material-symbols-outlined text-[18px]">compare_arrows</span>
+<span>로그라이크 vs 로그라이트 1:1 비교</span>
+</button>
+<button class="px-4 py-2.5 rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold flex items-center justify-center gap-1 hover:bg-primary-fixed transition-colors shadow-md" onclick="triggerAISpecificQuery('로그라이트 장르의 다음 추천작')">
+<span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+<span>AI 질의</span>
+</button>
+</div>
+</div>
+</main>
+<!-- MOBILE-SPECIFIC QUADRANT SELECTOR (Responsive Carousel / Tab Row for Small Screens) -->
+<section class="xl:hidden w-full px-gutter bg-surface-container-low py-space-md shadow-inner">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">모바일 전용 간편 사분면 브라우저</span>
+<span class="font-label-sm text-label-sm text-outline">터치 최적화</span>
+</div>
+<!-- 4 High-touch Target Tabs (>= 44px min touch height) -->
+<div class="grid grid-cols-2 gap-2">
+<button class="min-h-[48px] p-2.5 rounded-lg bg-surface-container flex items-center gap-2 text-left hover:bg-surface-container-high transition-colors" onclick="mobileFilterQuadrant('Q3')">
+<span class="w-3 h-3 rounded-full bg-error shrink-0"></span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">단판 피지컬 (Q3)</span>
+<span class="font-body-sm text-[11px] text-outline truncate">하이퍼FPS, 탄막슈팅</span>
+</div>
+</button>
+<button class="min-h-[48px] p-2.5 rounded-lg bg-surface-container flex items-center gap-2 text-left hover:bg-surface-container-high transition-colors" onclick="mobileFilterQuadrant('Q4')">
+<span class="w-3 h-3 rounded-full bg-secondary shrink-0"></span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">단판 뇌지컬 (Q4)</span>
+<span class="font-body-sm text-[11px] text-outline truncate">덱빌딩, 오토배틀러</span>
+</div>
+</button>
+<button class="min-h-[48px] p-2.5 rounded-lg bg-surface-container flex items-center gap-2 text-left hover:bg-surface-container-high transition-colors" onclick="mobileFilterQuadrant('Q2')">
+<span class="w-3 h-3 rounded-full bg-tertiary shrink-0"></span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">장기 피지컬 (Q2)</span>
+<span class="font-body-sm text-[11px] text-outline truncate">소울라이크, 메트로배니아</span>
+</div>
+</button>
+<button class="min-h-[48px] p-2.5 rounded-lg bg-surface-container flex items-center gap-2 text-left hover:bg-surface-container-high transition-colors" onclick="mobileFilterQuadrant('Q1')">
+<span class="w-3 h-3 rounded-full bg-primary shrink-0"></span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">장기 뇌지컬 (Q1)</span>
+<span class="font-body-sm text-[11px] text-outline truncate">4X 전략, 정통 CRPG</span>
+</div>
+</button>
+</div>
+</div>
+</section>
+<!-- 1:1 GENRE VERSUS COMPARISON POPUP MODAL (HIDDEN BY DEFAULT, ACCESSIBLE VIA VS BUTTON) -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-surface-container-lowest/80 backdrop-blur-md p-space-md hidden" id="compare-modal">
+<div class="w-full max-w-4xl bg-surface-container p-space-lg rounded-xl shadow-2xl flex flex-col gap-space-md max-h-[921px] overflow-y-auto">
+<!-- Compare Modal Header -->
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[24px]">compare_arrows</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">장르 1:1 정밀 대조기 (VS)</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant hover:text-on-surface" onclick="closeCompareModal()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Comparison Preset Chips -->
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-label-sm text-label-sm text-outline">추천 비교 프리셋:</span>
+<button class="px-3 py-1 rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold" onclick="loadComparePreset('로그라이크', '로그라이트')">
+          로그라이크 vs 로그라이트
+        </button>
+<button class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-label-md" onclick="loadComparePreset('소울라이크', '핵앤슬래시')">
+          소울라이크 vs 핵앤슬래시
+        </button>
+<button class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-md text-label-md" onclick="loadComparePreset('JRPG', 'CRPG')">
+          JRPG vs CRPG
+        </button>
+</div>
+<!-- Dynamic Versus Comparison Table Grid -->
+<div class="w-full overflow-x-auto rounded-lg bg-surface-container-low shadow-sm">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high text-on-surface font-label-md text-label-md">
+<th class="p-3 w-1/4">비교 항목</th>
+<th class="p-3 w-3/8 text-primary font-bold" id="compare-name-a">로그라이크 (Roguelike)</th>
+<th class="p-3 w-3/8 text-secondary font-bold" id="compare-name-b">로그라이트 (Roguelite)</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm text-on-surface divide-y divide-surface-container">
+<tr class="hover:bg-surface-container-highest/40">
+<td class="p-3 font-label-md text-label-md text-outline">한 줄 비유</td>
+<td class="p-3" id="comp-row-analogy-a">“모든 것을 잃고 시작하는 무자비한 체스 게임”</td>
+<td class="p-3" id="comp-row-analogy-b">“죽을 때마다 성장이 누적되는 이어달리기 러닝”</td>
+</tr>
+<tr class="hover:bg-surface-container-highest/40">
+<td class="p-3 font-label-md text-label-md text-outline">영구 성장 (메타프로그레스)</td>
+<td class="p-3 text-error font-medium" id="comp-row-meta-a">✕ 전무함 (오직 플레이어 지식과 실력만 남음)</td>
+<td class="p-3 text-tertiary font-medium" id="comp-row-meta-b">✓ 확실함 (영구 스탯, 해금 무기, 특성 트리)</td>
+</tr>
+<tr class="hover:bg-surface-container-highest/40">
+<td class="p-3 font-label-md text-label-md text-outline">핵심 플레이 템포</td>
+<td class="p-3" id="comp-row-loop-a">극도로 신중한 턴/판단, 한 번의 실수 = 영구 사망</td>
+<td class="p-3" id="comp-row-loop-b">과감한 기동과 돌파, 잦은 사망과 빠른 스펙업</td>
+</tr>
+<tr class="hover:bg-surface-container-highest/40">
+<td class="p-3 font-label-md text-label-md text-outline">주요 스트레스 요인</td>
+<td class="p-3" id="comp-row-stress-a">수십 시간의 집중이 단 한 방에 증발하는 허탈감</td>
+<td class="p-3" id="comp-row-stress-b">반복 노가다(그라인딩)로 인한 매너리즘</td>
+</tr>
+<tr class="hover:bg-surface-container-highest/40">
+<td class="p-3 font-label-md text-label-md text-outline">추천 게이머 유형</td>
+<td class="p-3" id="comp-row-gamer-a">냉정한 계산과 하드코어 성취감을 즐기는 게이머</td>
+<td class="p-3" id="comp-row-gamer-b">빠른 템포의 손맛과 점진적 강화를 즐기는 게이머</td>
+</tr>
+<tr class="hover:bg-surface-container-highest/40">
+<td class="p-3 font-label-md text-label-md text-outline">대표 벤치마크</td>
+<td class="p-3 font-label-sm text-label-sm text-primary" id="comp-row-games-a">넷핵(Nethack), 돌죽(DCSS)</td>
+<td class="p-3 font-label-sm text-label-sm text-secondary" id="comp-row-games-b">하데스(Hades), 엔터 더 건전</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="flex items-center justify-end gap-2 pt-2">
+<button class="px-5 py-2 rounded-full bg-surface-container-highest text-on-surface font-label-md text-label-md" onclick="closeCompareModal()">
+          닫기
+        </button>
+</div>
+</div>
+</div>
+<!-- FLOATING AI GUIDE CHATBOT WIDGET -->
+<div class="fixed bottom-6 right-6 z-40 flex flex-col items-end">
+<!-- Chat Flyout Window (Toggleable) -->
+<div class="w-80 sm:w-96 bg-surface-container p-space-md rounded-xl shadow-2xl mb-3 flex flex-col gap-space-sm hidden" id="ai-chat-window">
+<!-- Chat Header -->
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span class="font-headline-sm text-[15px] font-bold text-on-surface">장르나침반 AI 어시스턴트</span>
+</div>
+<button class="text-outline hover:text-on-surface" onclick="toggleAIChat()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Message History Container -->
+<div class="flex flex-col gap-space-xs max-h-60 overflow-y-auto pr-1" id="chat-messages">
+<!-- Bot Greeting Bubble -->
+<div class="flex items-start gap-2">
+<span class="w-6 h-6 rounded-full bg-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-primary text-[14px]">smart_toy</span>
+</span>
+<div class="bg-surface-container-low p-2.5 rounded-lg text-on-surface font-body-sm text-[13px] leading-relaxed">
+            반갑습니다! 게이머님의 평소 플레이 스타일이나 재미있게 했던 게임을 알려주시면, 좌표계에 딱 맞는 장르를 추천해 드릴게요!
+          </div>
+</div>
+</div>
+<!-- Quick Suggestion Query Chips -->
+<div class="flex items-center gap-1 overflow-x-auto py-1">
+<button class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container-highest text-on-surface-variant hover:text-primary whitespace-nowrap" onclick="sendQuickQuery('퇴근 후 30분만 가볍게 할 만한 장르는?')">
+          퇴근 후 30분 장르?
+        </button>
+<button class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container-highest text-on-surface-variant hover:text-primary whitespace-nowrap" onclick="sendQuickQuery('로그라이트랑 덱빌딩 차이')">
+          덱빌딩 vs 로그라이트
+        </button>
+</div>
+<!-- Message Input -->
+<div class="flex items-center gap-1 bg-surface-container-low px-2.5 py-1.5 rounded-full">
+<input class="w-full bg-transparent text-on-surface font-body-sm text-body-sm focus:outline-none placeholder:text-outline text-xs" id="ai-chat-input" onkeydown="handleChatKey(event)" placeholder="질문을 입력하세요..." type="text"/>
+<button class="w-7 h-7 rounded-full bg-primary flex items-center justify-center text-on-primary" onclick="sendUserMessage()">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+</button>
+</div>
+</div>
+<!-- Glowing FAB (Floating Action Button) -->
+<button class="flex items-center gap-2 px-4 py-3 rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold shadow-lg hover:bg-primary-fixed transition-transform hover:scale-105 active:scale-95" onclick="toggleAIChat()">
+<span class="material-symbols-outlined text-[20px]">explore</span>
+<span class="hidden sm:inline">AI 장르 나침반</span>
+</button>
+</div>
+</div>
+<!-- EMBEDDED HIGHLY-RESPONSIVE INTERACTIVE SCRIPT -->
+<script>
+  // Genre Database Dictionary
+  const GENRE_DATA = {
+    roguelite: {
+      name: "로그라이트",
+      sub: "Roguelite",
+      quadrant: "Q3~Q4 경계형",
+      coords: "[-10, -20]",
+      analogy: "“죽을 때마다 조금씩 강해져서 돌아오는 불사신 러닝 액션”",
+      pros: [
+        "짧고 굵은 한 판(30분 내외) 몰입을 선호하는 분",
+        "반복 실패에서 좌절 대신 학습의 쾌감을 느끼는 분",
+        "매 판 새로운 무기·스킬 빌드 조합을 탐구하는 분"
+      ],
+      cons: [
+        "한 번 죽으면 자원이 증발하는 허탈감을 견디기 힘든 분",
+        "정밀한 순발력과 빠른 회피 피로도가 높은 게이머"
+      ],
+      bridge: "평소 ‘디아블로의 핵앤슬래시 파밍’이나 ‘리그 오브 레전드의 스킬 콤보’를 즐기셨다면 즉시 몰입할 수 있습니다."
+    },
+    soulslike: {
+      name: "소울라이크",
+      sub: "Soulslike",
+      quadrant: "Q2: 피지컬 × 장기 성장",
+      coords: "[-65, +60]",
+      analogy: "“무자비한 보스의 패턴을 온몸으로 체득하여 쟁취하는 극한의 카타르시스”",
+      pros: [
+        "적의 모션을 읽고 완벽한 패링과 회피를 구사하는 손맛을 즐기는 분",
+        "수십 번의 트라이 끝에 찾아오는 압도적 성취감을 원하는 분",
+        "어둡고 웅장한 다크 판타지 세계관 탐험을 좋아하는 분"
+      ],
+      cons: [
+        "사망 패널티(소울/경험치 분실)로 스트레스를 쉽게 받는 분",
+        "진입 장벽이 높은 하드코어 컨트롤을 기피하는 게이머"
+      ],
+      bridge: "‘몬스터 헌터의 패턴 파훼’나 ‘정밀 액션 RPG의 보스전 긴장감’을 사랑한다면 강력히 권장합니다."
+    },
+    deckbuilder: {
+      name: "덱빌딩 로그라이크",
+      sub: "Deckbuilding Roguelike",
+      quadrant: "Q4: 뇌지컬 × 단판 전술",
+      coords: "[+50, -30]",
+      analogy: "“손에 쥔 몇 장의 카드로 완벽한 연계 시너지를 조립하는 지략 퍼즐”",
+      pros: [
+        "순발력 피로도 없이 차분하게 수읽기와 확률 계산을 즐기는 분",
+        "의도한 카드 콤보가 폭발할 때 도파민을 느끼는 분",
+        "언제든 정지(Pause)하고 생각할 여유가 필요한 직장인 게이머"
+      ],
+      cons: [
+        "실시간 조작 액션의 화려한 손맛을 제1순위로 두는 분",
+        "확률(RNG)에 의한 덱 꼬임 스트레스를 싫어하는 분"
+      ],
+      bridge: "‘하스스톤의 덱 구성 재미’와 ‘체스의 전략적 턴 계산’을 좋아하셨다면 인생 게임이 될 확률이 높습니다."
+    },
+    "4x": {
+      name: "4X 대전략",
+      sub: "eXplore, eXpand, eXploit, eXterminate",
+      quadrant: "Q1: 뇌지컬 × 대서사 빌딩",
+      coords: "[+85, +75]",
+      analogy: "“한 턴만 더 하려다 창밖의 아침 해를 보게 만드는 거대 문명 지휘관”",
+      pros: [
+        "국가 경제, 군사, 외교, 기술 테크트리를 총괄하는 거시적 설계를 즐기는 분",
+        "수십 시간 동안 제국이 번영해 나가는 역사적 몰입감을 추구하는 분",
+        "장기적 인과관계가 맞물리는 깊은 시뮬레이션을 좋아하는 분"
+      ],
+      cons: [
+        "룰북을 정독하듯 복잡한 UI와 매뉴얼 학습을 버거워하는 분",
+        "1시간 미만으로 승패가 결판나는 캐주얼 게임을 찾는 게이머"
+      ],
+      bridge: "‘보드게임 카탄이나 카르카손의 영토 확장’ 혹은 ‘삼국지 시리즈의 천하통일’ 감성을 좋아하신다면 최고의 장르입니다."
+    },
+    metroidvania: {
+      name: "메트로배니아",
+      sub: "Metroidvania",
+      quadrant: "Q2: 피지컬 × 서사 탐험",
+      coords: "[-45, +40]",
+      analogy: "“새로운 능력을 얻을 때마다 닫혔던 미지의 문이 열리는 입체 미로 탐험”",
+      pros: [
+        "거대하게 얽힌 지도 구석구석 숨겨진 비밀 통로를 찾는 희열을 아는 분",
+        "더블점프, 대시 등 기동 능력이 해금되며 전율을 느끼는 분"
+      ],
+      cons: [
+        "길찾기와 백트래킹(왔던 길 되돌아가기)을 지루해하는 분"
+      ],
+      bridge: "‘오리와 도깨비불’, ‘할로우 나이트’의 감각적인 플랫포머 탐험을 떠올려보세요."
+    },
+    crpg: {
+      name: "정통 CRPG",
+      sub: "Classic Computer RPG",
+      quadrant: "Q1: 뇌지컬 × 대서사 빌딩",
+      coords: "[+60, +80]",
+      analogy: "“한 줄의 대화 선택지가 세계관 전체의 운명을 뒤바꾸는 한 편의 장편 소설”",
+      pros: [
+        "내 캐릭터의 가치관과 선택에 따라 분기하는 정교한 서사를 원하는 분",
+        "TRPG 주사위 굴림(D20)과 턴제 전술 포지셔닝을 즐기는 분"
+      ],
+      cons: [
+        "텍스트 독서량이 방대한 것을 부담스러워하는 분"
+      ],
+      bridge: "‘발더스 게이트 3’의 폭발적 자유도와 서사적 쾌감을 떠올려보세요."
+    },
+    battleroyale: {
+      name: "배틀로얄",
+      sub: "Battle Royale",
+      quadrant: "Q3: 피지컬 × 단판 몰입",
+      coords: "[-55, -65]",
+      analogy: "“좁혀오는 자기장 속에서 최후의 1인이 될 때까지 벌이는 극한의 생존 서바이벌”",
+      pros: [
+        "실시간 슈팅 에임과 지형지물 엄폐 사격 손맛을 즐기는 분",
+        "수십 명과의 실시간 경쟁에서 1등을 쟁취할 때의 전율을 원하는 분"
+      ],
+      cons: [
+        "초반 파밍 중 허무하게 저격당했을 때의 탈력감을 싫어하는 분"
+      ],
+      bridge: "‘배틀그라운드’, ‘에이펙스 레전드’의 심장 쫄깃한 파이널 서클 대치전입니다."
+    },
+    autobattler: {
+      name: "오토배틀러",
+      sub: "Auto Battler / Auto Chess",
+      quadrant: "Q4: 뇌지컬 × 단판 전술",
+      coords: "[+35, -50]",
+      analogy: "“기물 배치와 시너지 조합만 갖추고 승패의 불꽃놀이를 지켜보는 전략 감독”",
+      pros: [
+        "정밀한 조작 필요 없이 라운드별 경제(이자) 운영과 리롤 확률 계산을 즐기는 분",
+        "친구들과 가볍게 떠들며 한 판씩 승부를 가리고 싶은 분"
+      ],
+      cons: [
+        "전투가 시작되면 직접 개입할 수 없는 방관 상태를 답답해하는 분"
+      ],
+      bridge: "‘전략적 팀 전투(TFT / 롤토체스)’의 3성 기물 완성 카타르시스를 생각하시면 됩니다."
+    }
+  };
+
+  // Switch Active Genre and update Right Report Panel
+  function selectGenre(key) {
+    const data = GENRE_DATA[key];
+    if (!data) return;
+
+    // Update Node visual state
+    document.querySelectorAll('.genre-node').forEach(node => {
+      node.classList.remove('active');
+      const innerRing = node.querySelector('.animate-ping');
+      if (innerRing) innerRing.remove();
+      node.querySelector('.group > span').className = "relative flex h-5 w-5 items-center justify-center rounded-full bg-surface-container-highest shadow-md";
+    });
+
+    const activeNode = document.getElementById('node-' + key);
+    if (activeNode) {
+      activeNode.classList.add('active');
+      const circle = activeNode.querySelector('.group > span');
+      circle.className = "relative flex h-6 w-6 items-center justify-center rounded-full bg-primary shadow-lg ring-4 ring-primary/30";
+      
+      const ping = document.createElement('span');
+      ping.className = "absolute -inset-3 rounded-full bg-primary/20 animate-ping";
+      activeNode.querySelector('.group').prepend(ping);
+    }
+
+    // Populate Report Panel with smooth text update
+    document.getElementById('detail-title').textContent = data.name;
+    document.getElementById('detail-subtitle').textContent = data.sub;
+    document.getElementById('detail-quadrant-badge').textContent = '사분면: ' + data.quadrant;
+    document.getElementById('detail-coordinate-badge').textContent = '좌표 ' + data.coords;
+    document.getElementById('detail-analogy').innerHTML = data.analogy;
+    document.getElementById('detail-bridge').innerHTML = data.bridge;
+
+    // Pros Checklist
+    const prosContainer = document.getElementById('detail-pros-list');
+    prosContainer.innerHTML = '';
+    data.pros.forEach(item => {
+      const li = document.createElement('li');
+      li.className = "flex items-start gap-1.5";
+      li.innerHTML = '<span class="text-tertiary text-xs">✓</span><span>' + item + '</span>';
+      prosContainer.appendChild(li);
+    });
+
+    // Cons Checklist
+    const consContainer = document.getElementById('detail-cons-list');
+    consContainer.innerHTML = '';
+    data.cons.forEach(item => {
+      const li = document.createElement('li');
+      li.className = "flex items-start gap-1.5";
+      li.innerHTML = '<span class="text-error text-xs">✕</span><span>' + item + '</span>';
+      consContainer.appendChild(li);
+    });
+  }
+
+  // Update Live HUD Coordinates as mouse moves over compass
+  function updateCoordinateHUD(event) {
+    const rect = event.currentTarget.getBoundingClientRect();
+    const xPct = (event.clientX - rect.left) / rect.width;
+    const yPct = (event.clientY - rect.top) / rect.height;
+
+    // Map 0~1 to -100 ~ +100
+    const coordX = Math.round((xPct * 200) - 100);
+    const coordY = Math.round(100 - (yPct * 200));
+
+    let quad = "중앙 원점 (0, 0)";
+    if (coordX >= 0 && coordY >= 0) quad = "Q1 (뇌지컬 × 대서사)";
+    else if (coordX < 0 && coordY >= 0) quad = "Q2 (피지컬 × 서사)";
+    else if (coordX < 0 && coordY < 0) quad = "Q3 (피지컬 × 단판)";
+    else if (coordX >= 0 && coordY < 0) quad = "Q4 (뇌지컬 × 단판)";
+
+    document.getElementById('live-coords').textContent = `POINTER: X: ${coordX > 0 ? '+' + coordX : coordX} | Y: ${coordY > 0 ? '+' + coordY : coordY} [${quad}]`;
+  }
+
+  // Filter Quadrants
+  function filterQuadrant(quad) {
+    // Button styling
+    document.querySelectorAll('.quad-btn').forEach(btn => {
+      btn.className = "quad-btn font-label-md text-label-md px-space-md py-1.5 rounded-full transition-all bg-surface-container text-on-surface-variant hover:text-on-surface";
+    });
+
+    const activeBtn = document.getElementById('quad-filter-' + quad.toLowerCase());
+    if (activeBtn) {
+      activeBtn.className = "quad-btn active font-label-md text-label-md px-space-md py-1.5 rounded-full transition-all bg-primary text-on-primary font-bold shadow-sm";
+    }
+
+    // Filter Map Nodes
+    document.querySelectorAll('.genre-node').forEach(node => {
+      if (quad === 'ALL' || node.getAttribute('data-quad') === quad) {
+        node.style.opacity = '1';
+        node.style.pointerEvents = 'auto';
+      } else {
+        node.style.opacity = '0.2';
+        node.style.pointerEvents = 'none';
+      }
+    });
+  }
+
+  // Mobile dedicated quick switcher
+  function mobileFilterQuadrant(quad) {
+    filterQuadrant(quad);
+    // Smooth scroll down to stage
+    document.getElementById('interactive-stage-container').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  // Switch Main View (Interactive Map vs Cards Grid)
+  function switchMainView(mode) {
+    const mapContainer = document.getElementById('interactive-stage-container');
+    const cardsContainer = document.getElementById('cards-stage-container');
+    const btnMap = document.getElementById('btn-view-map');
+    const btnCards = document.getElementById('btn-view-cards');
+
+    if (mode === 'map') {
+      mapContainer.classList.remove('hidden');
+      cardsContainer.classList.add('hidden');
+      cardsContainer.classList.remove('grid');
+      btnMap.className = "flex items-center gap-1 font-label-md text-label-md px-3 py-1 rounded-full bg-primary text-on-primary transition-all font-semibold";
+      btnCards.className = "flex items-center gap-1 font-label-md text-label-md px-3 py-1 rounded-full text-on-surface-variant hover:text-on-surface transition-all";
+    } else {
+      mapContainer.classList.add('hidden');
+      cardsContainer.classList.remove('hidden');
+      cardsContainer.classList.add('grid');
+      btnCards.className = "flex items-center gap-1 font-label-md text-label-md px-3 py-1 rounded-full bg-primary text-on-primary transition-all font-semibold";
+      btnMap.className = "flex items-center gap-1 font-label-md text-label-md px-3 py-1 rounded-full text-on-surface-variant hover:text-on-surface transition-all";
+    }
+  }
+
+  // Search filter
+  function handleGenreSearch(keyword) {
+    const term = keyword.trim().toLowerCase();
+    document.querySelectorAll('.genre-node').forEach(node => {
+      const gKey = node.getAttribute('data-genre');
+      const data = GENRE_DATA[gKey];
+      if (!term || (data && (data.name.toLowerCase().includes(term) || data.sub.toLowerCase().includes(term) || data.analogy.toLowerCase().includes(term)))) {
+        node.style.opacity = '1';
+      } else {
+        node.style.opacity = '0.15';
+      }
+    });
+  }
+
+  function clearSearch() {
+    const input = document.getElementById('genre-search-input');
+    input.value = '';
+    handleGenreSearch('');
+  }
+
+  // Parametric Filter application (Difficulty + Playtime)
+  function applyFilters() {
+    const diff = document.getElementById('diff-filter').value;
+    const time = document.getElementById('time-filter').value;
+
+    document.querySelectorAll('.genre-node').forEach(node => {
+      const nDiff = node.getAttribute('data-diff');
+      const nTime = node.getAttribute('data-time');
+
+      const passDiff = (diff === 'ALL' || nDiff === diff);
+      const passTime = (time === 'ALL' || nTime === time);
+
+      if (passDiff && passTime) {
+        node.style.opacity = '1';
+        node.style.pointerEvents = 'auto';
+      } else {
+        node.style.opacity = '0.2';
+        node.style.pointerEvents = 'none';
+      }
+    });
+  }
+
+  function toggleTagFilter(btn, tag) {
+    btn.classList.toggle('bg-primary');
+    btn.classList.toggle('text-on-primary');
+    btn.classList.toggle('bg-surface-container');
+    btn.classList.toggle('text-on-surface-variant');
+
+    const isActive = btn.classList.contains('bg-primary');
+    document.querySelectorAll('.genre-node').forEach(node => {
+      const nodeTags = node.getAttribute('data-tags') || '';
+      if (!isActive || nodeTags.includes(tag)) {
+        node.style.opacity = '1';
+      } else {
+        node.style.opacity = '0.25';
+      }
+    });
+  }
+
+  // 1:1 Compare Modal Management
+  function openCompareModal(genreA, genreB) {
+    document.getElementById('compare-modal').classList.remove('hidden');
+    loadComparePreset(genreA, genreB);
+  }
+
+  function closeCompareModal() {
+    document.getElementById('compare-modal').classList.add('hidden');
+  }
+
+  function loadComparePreset(gA, gB) {
+    document.getElementById('compare-name-a').textContent = gA;
+    document.getElementById('compare-name-b').textContent = gB;
+
+    if (gA.includes('로그라이크') && gB.includes('로그라이트')) {
+      document.getElementById('comp-row-analogy-a').textContent = "“모든 것을 잃고 시작하는 무자비한 체스 게임”";
+      document.getElementById('comp-row-analogy-b').textContent = "“죽을 때마다 성장이 누적되는 이어달리기 러닝”";
+      document.getElementById('comp-row-meta-a').textContent = "✕ 전무함 (오직 플레이어 지식과 실력만 보존)";
+      document.getElementById('comp-row-meta-b').textContent = "✓ 확실함 (영구 스탯, 해금 무기, 특성 트리)";
+      document.getElementById('comp-row-loop-a').textContent = "극도로 신중한 턴/판단, 한 번의 실수 = 영구 사망";
+      document.getElementById('comp-row-loop-b').textContent = "과감한 기동과 돌파, 잦은 사망과 빠른 스펙업";
+      document.getElementById('comp-row-stress-a').textContent = "수십 시간의 집중이 단 한 방에 증발하는 허탈감";
+      document.getElementById('comp-row-stress-b').textContent = "반복 노가다(그라인딩)로 인한 매너리즘";
+      document.getElementById('comp-row-gamer-a').textContent = "냉정한 계산과 하드코어 성취감을 즐기는 게이머";
+      document.getElementById('comp-row-gamer-b').textContent = "빠른 템포의 손맛과 점진적 강화를 즐기는 게이머";
+      document.getElementById('comp-row-games-a').textContent = "넷핵(Nethack), 돌죽(DCSS)";
+      document.getElementById('comp-row-games-b').textContent = "하데스(Hades), 엔터 더 건전";
+    } else if (gA.includes('소울라이크')) {
+      document.getElementById('comp-row-analogy-a').textContent = "“상대의 틈을 끝까지 기다려 찌르는 정밀 검술”";
+      document.getElementById('comp-row-analogy-b').textContent = "“화면 가득 찬 적을 시원하게 쓸어담는 무쌍 파밍”";
+      document.getElementById('comp-row-meta-a').textContent = "패턴 암기와 레벨업, 장비 강화의 조화";
+      document.getElementById('comp-row-meta-b').textContent = "압도적인 드랍율과 장비 스탯 시너지 위주";
+      document.getElementById('comp-row-loop-a').textContent = "탐색 → 사망 → 보스 패턴 숙지 → 클리어";
+      document.getElementById('comp-row-loop-b').textContent = "대량 사냥 → 전리품 획득 → 더 빠른 사냥";
+      document.getElementById('comp-row-stress-a').textContent = "타이밍 미스 한 번에 즉사하는 긴장 피로";
+      document.getElementById('comp-row-stress-b').textContent = "단순 반복 클릭으로 인한 지루함";
+      document.getElementById('comp-row-gamer-a').textContent = "고난도 컨트롤 도전을 즐기는 성향";
+      document.getElementById('comp-row-gamer-b').textContent = "빠른 파밍과 시각적 타격감을 즐기는 성향";
+      document.getElementById('comp-row-games-a').textContent = "엘든 링, 다크소울 시리즈";
+      document.getElementById('comp-row-games-b').textContent = "디아블로 4, 패스 오브 엑자일";
+    }
+  }
+
+  // Floating AI Chatbot Handlers
+  function toggleAIChat() {
+    const win = document.getElementById('ai-chat-window');
+    win.classList.toggle('hidden');
+  }
+
+  function handleChatKey(event) {
+    if (event.key === 'Enter') {
+      sendUserMessage();
+    }
+  }
+
+  function sendQuickQuery(text) {
+    const input = document.getElementById('ai-chat-input');
+    input.value = text;
+    sendUserMessage();
+  }
+
+  function triggerAISpecificQuery(query) {
+    toggleAIChat();
+    const chatWin = document.getElementById('ai-chat-window');
+    chatWin.classList.remove('hidden');
+    sendQuickQuery(query);
+  }
+
+  function sendUserMessage() {
+    const input = document.getElementById('ai-chat-input');
+    const msg = input.value.trim();
+    if (!msg) return;
+
+    const chatContainer = document.getElementById('chat-messages');
+
+    // Add User Bubble
+    const userDiv = document.createElement('div');
+    userDiv.className = "flex items-start justify-end gap-2";
+    userDiv.innerHTML = `
+      <div class="bg-primary text-on-primary p-2.5 rounded-lg font-body-sm text-[13px] leading-relaxed max-w-[80%]">
+        ${escapeHTML(msg)}
+      </div>
+    `;
+    chatContainer.appendChild(userDiv);
+    input.value = '';
+
+    // Scroll to bottom
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+
+    // Simulate AI Telemetry Response
+    setTimeout(() => {
+      const botDiv = document.createElement('div');
+      botDiv.className = "flex items-start gap-2";
+
+      let responseText = "게이머님의 성향 좌표를 분석한 결과, 피지컬 컨트롤과 즉각적인 단판 몰입이 강점인 <strong>'로그라이트 (하데스)'</strong>나 <strong>'덱빌딩 로그 (슬레이 더 스파이어)'</strong>가 가장 높은 적합도(94%)를 보입니다!";
+      if (msg.includes('30분') || msg.includes('퇴근')) {
+        responseText = "퇴근 후 가벼운 플레이로는 1판당 25분 안팎으로 확실한 도파민을 주는 <strong>'로그라이트(Hades)'</strong> 혹은 <strong>'뱀파이어 서바이벌'</strong>을 강력 추천합니다. 게임을 중간에 꺼도 언제든 이어할 수 있어요!";
+      } else if (msg.includes('소울')) {
+        responseText = "소울라이크 입문으로는 시스템적 보조 장치가 가장 풍부한 <strong>'엘든 링(Elden Ring)'</strong>의 영체 소환 플레이를 추천드립니다. 절망감보다 탐험의 즐거움이 훨씬 큽니다.";
+      }
+
+      botDiv.innerHTML = `
+        <span class="w-6 h-6 rounded-full bg-primary flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-on-primary text-[14px]">smart_toy</span>
+        </span>
+        <div class="bg-surface-container-low p-2.5 rounded-lg text-on-surface font-body-sm text-[13px] leading-relaxed">
+          ${responseText}
+        </div>
+      `;
+      chatContainer.appendChild(botDiv);
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+    }, 600);
+  }
+
+  function escapeHTML(str) {
+    return str.replace(/[&<>'"]/g, 
+      tag => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        "'": '&#39;',
+        '"': '&quot;'
+      }[tag] || tag)
+    );
+  }
+
+  function toggleBookmark(btn) {
+    const icon = btn.querySelector('.material-symbols-outlined');
+    if (icon.textContent === 'bookmark') {
+      icon.textContent = 'bookmark_added';
+      btn.classList.add('text-primary');
+      btn.classList.remove('text-outline');
+    } else {
+      icon.textContent = 'bookmark';
+      btn.classList.remove('text-primary');
+      btn.classList.add('text-outline');
+    }
+  }
+
+  function shareGenreReport() {
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(window.location.href);
+      alert("장르 분석 리포트 링크가 클립보드에 복사되었습니다!");
+    }
+  }
+</script></main><footer class="w-full bg-surface-container-lowest py-space-lg shadow-[0_-1px_12px_rgba(0,0,0,0.2)]"><div class="w-full px-gutter-desktop flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-primary">장르나침반</span><span class="font-body-sm text-body-sm text-on-surface-variant">© 2025 GenreCompass Tactical Cartography System. All rights reserved.</span></div><div class="flex items-center gap-space-md font-label-md text-label-md text-on-surface-variant"><span class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span><span>GRID STATUS: ACTIVE</span></span><span class="text-outline">|</span><span>ENGINE V2.4 SPATIAL HUD</span></div></div></footer></body></html>
