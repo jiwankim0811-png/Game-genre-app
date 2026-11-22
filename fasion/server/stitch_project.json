@@ -1,0 +1,19 @@
+{
+  "projectId": "projects/6324336699399294728",
+  "title": "GenreCompass Game Guide",
+  "deviceType": "DESKTOP",
+  "visibility": "PRIVATE",
+  "createTime": "2026-11-22T15:27:21.548120Z",
+  "updateTime": "2026-11-22T15:30:27.450363Z",
+  "designSystem": "GenreCompass",
+  "screens": [
+    {
+      "id": "2bb3003c295c49e190d011ec747551c6",
+      "name": "projects/6324336699399294728/screens/2bb3003c295c49e190d011ec747551c6",
+      "title": "장르나침반 (GenreCompass) 메인 인터랙티브 가이드",
+      "width": 2560,
+      "height": 2356,
+      "role": "MAIN_INTERACTIVE_GUIDE"
+    }
+  ]
+}
