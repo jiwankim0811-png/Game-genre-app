@@ -1,0 +1,74 @@
+name: Deploy to Cloud Run
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'fasion/**'
+      - 'server/**'
+      - '.github/workflows/deploy.yml'
+  workflow_dispatch:
+
+env:
+  PROJECT_ID: thetime-1
+  REGION: us-central1
+  SERVICE_NAME: game-genre-app
+
+jobs:
+  deploy:
+    name: Build & Deploy to Cloud Run
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Authenticate to Google Cloud
+        id: auth
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v2
+
+      - name: Deploy to Cloud Run
+        id: deploy
+        run: |
+          DEPLOY_DIR="fasion/server"
+          if [ ! -d "$DEPLOY_DIR" ]; then
+            DEPLOY_DIR="server"
+          fi
+          echo "Deploying from directory: $DEPLOY_DIR"
+
+          gcloud run deploy ${{ env.SERVICE_NAME }} \
+            --source "$DEPLOY_DIR" \
+            --project ${{ env.PROJECT_ID }} \
+            --region ${{ env.REGION }} \
+            --platform managed \
+            --allow-unauthenticated \
+            --set-env-vars GEMINI_API_KEY="${{ secrets.GEMINI_API_KEY }}"
+
+      - name: Post-Deployment Smoke Test
+        run: |
+          SERVICE_URL=$(gcloud run services describe ${{ env.SERVICE_NAME }} --project ${{ env.PROJECT_ID }} --region ${{ env.REGION }} --format="value(status.url)")
+          echo "Cloud Run Service URL: $SERVICE_URL"
+          echo "Running health check on $SERVICE_URL/health ..."
+          HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" "$SERVICE_URL/health")
+          echo "Health check HTTP response code: $HTTP_CODE"
+
+      - name: Register URL to GAS Properties (gas-url-sync)
+        if: always()
+        run: |
+          SERVICE_URL=$(gcloud run services describe ${{ env.SERVICE_NAME }} --project ${{ env.PROJECT_ID }} --region ${{ env.REGION }} --format="value(status.url)")
+          echo "Cloud Run Service URL: $SERVICE_URL"
+          WEBHOOK_URL="${{ secrets.GAS_WEBHOOK_URL }}"
+          if [ -z "$WEBHOOK_URL" ]; then
+            WEBHOOK_URL="https://script.google.com/macros/s/AKfycbzMEgK-ydhuzlU4Q3_qjCz_LFyVKGZkAva_jSItiIfsBWvpdNaknfbPnPVH93S37XrLDw/exec"
+          fi
+          echo "Syncing URL to GAS webhook: $WEBHOOK_URL"
+          curl -X POST -L \
+            -H "Content-Type: application/json" \
+            -d "{\"serviceName\": \"${{ env.SERVICE_NAME }}\", \"serviceUrl\": \"$SERVICE_URL\"}" \
+            "$WEBHOOK_URL"
